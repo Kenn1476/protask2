@@ -1,0 +1,12 @@
+<div class="contents row">
+  <div class="container">
+    <h3>投稿する</h3>
+    <%= form_with(model: @task, local: true) do |form| %>
+      <%= form.text_field :reference_number, placeholder: "Reference Number" %>
+      <%= form.text_field :invoice_number, placeholder: "Invoice Number" %>
+      <%= form.text_field :customer_email, placeholder: "Customer Email" %>
+      <%= form.text_area :text, placeholder: "text", rows: "10" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @tasks.each do |task| %>
+      <p><%= task.reference_number %></p>
+      <span class="name"><%= task.invoice_number %></span>
+      <span class="name"><%= task.customer_email %></span>
+      <span class="name"><%= task.text %></span>
+    </div>
+  <% end %>
+</div>
