@@ -21,3 +21,34 @@
       </span>
       </span>
 </div>
+
+<h1>SHOW INQUIRY </h1>
+       <table class="table_show">
+        <tbody>
+          <tr>
+            <th class="table__col1">Reference Number</th>
+            <td class="table__col2"><%= @task.reference_number %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">Invoice Number</th>
+            <td class="table__col2"><%= @task.invoice_number %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">Customer Email</th>
+            <td class="table__col2"><%= @task.customer_email %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">Text</th>
+            <td class="table__col2"><%= @task.text %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">Edit</th>
+            <td class="table__col2"><%= link_to '編集', edit_task_path(@task.id) %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">Delete</th>
+            <td class="table__col2"><%= link_to '削除', task_path(@task.id), data: { turbo_method: :delete } %></td>
+          </tr>
+        </tbody>
+      </table>
+
