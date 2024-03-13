@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @tasks = Task.includes(:user)
+    @tasks = Task.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -31,6 +31,8 @@ class TasksController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @task.comments.includes(:user)
   end
 
   private

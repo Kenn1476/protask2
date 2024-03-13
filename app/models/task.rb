@@ -4,4 +4,5 @@ class Task < ApplicationRecord
   validates :invoice_number, presence: true
   validates :customer_email, presence: true
   belongs_to :user
+  has_many :comments
 end
